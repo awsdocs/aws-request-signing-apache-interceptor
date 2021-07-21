@@ -1,11 +1,10 @@
-## My Project
+# AWS Request Signing Interceptor
 
-TODO: Fill this README out!
+An AWS request signing interceptor for arbitrary HttpRequests.
 
-Be sure to:
+This enables you to sign requests to any service that leverages SigV4 this means you have a client that can access any AWS Service or APIGW backed service.
 
-* Change the title in this README
-* Edit your repository description on GitHub
+This library is based on the archived [AWS Interceptor](https://github.com/amazon-archives/aws-request-signing-apache-interceptor) library, but uses the AWS SDK for Java version 2.X.X.
 
 ## Security
 
@@ -15,3 +14,21 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 
 This project is licensed under the Apache-2.0 License.
 
+## Usage
+```java
+Aws4Signer signer = Aws4Signer.create();
+
+HttpRequestInterceptor interceptor = new AwsRequestSigningApacheInterceptor(serviceName, signer, credentialsProvider, AWS_REGION);
+
+HttpClients.custom()
+        .addInterceptorLast(interceptor)
+        .build();
+```
+
+## Examples
+
+See [examples](src/test/java/io/github/acm19/aws/interceptor/test) for a few valid requests.
+
+## Contributors
+
+Many thanks to [acm19](https://github.com/acm19), who shepharded the update to the archived library in the GitHub repo [https://github.com/acm19/aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor/issues/16).
