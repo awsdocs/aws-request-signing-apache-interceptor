@@ -27,7 +27,7 @@ HttpClients.custom()
 
 ## Examples
 
-See [examples](src/test/java/io/github/acm19/aws/interceptor/test) for a few valid requests.
+See [tests](src/test/java/io/github/acm19/aws/interceptor/test) for examples of requests.
 
 ## Contributors
 
