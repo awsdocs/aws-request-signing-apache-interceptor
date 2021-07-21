@@ -2,7 +2,7 @@
 
 An AWS request signing interceptor for arbitrary HttpRequests.
 
-This enables you to sign requests to any service that leverages SigV4 this means you have a client that can access any AWS Service or APIGW backed service.
+This enables you to sign requests to any service that leverages SigV4 this means you have a client that can access any Amazon or AWS Service or Amazon API Gateway backed service.
 
 This library is based on the archived [AWS Interceptor](https://github.com/amazon-archives/aws-request-signing-apache-interceptor) library, but uses the AWS SDK for Java version 2.X.X.
 
