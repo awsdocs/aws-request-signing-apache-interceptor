@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2012-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -17,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
@@ -110,7 +111,7 @@ public class AwsRequestSigningApacheInterceptorTest {
             return SdkHttpFullRequest.builder()
                     .uri(request.getUri())
                     .method(SdkHttpMethod.GET)
-                    .contentStreamProvider(request.contentStreamProvider().orElseThrow())
+                    .contentStreamProvider(request.contentStreamProvider().orElseThrow(NoSuchElementException::new))
                     .headers(request.headers())
                     .appendHeader(name, value)
                     .appendHeader("resourcePath", request.getUri().getRawPath())
