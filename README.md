@@ -1,3 +1,7 @@
+## ⚠ Important
+
+This repository has been archived and is no longer maintained. Proceed with caution.
+
 # AWS Request Signing Interceptor
 
 An AWS request signing interceptor for arbitrary HttpRequests.
@@ -31,4 +35,4 @@ See [tests](src/test/java/io/github/acm19/aws/interceptor/test) for examples of 
 
 ## Contributors
 
-Many thanks to [acm19](https://github.com/acm19), who shepharded the update to the archived library in the GitHub repo [https://github.com/acm19/aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor/issues/16).
+Many thanks to [acm19](https://github.com/acm19), who shepherded the update to the archived library in the GitHub repo [https://github.com/acm19/aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor/issues/16).
