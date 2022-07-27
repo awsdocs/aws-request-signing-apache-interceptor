@@ -1,3 +1,7 @@
+## ⚠ Important
+
+This repository has been archived and is no longer accepting contributions.
+
 # Contributing Guidelines
 
 Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional
